@@ -15,3 +15,18 @@ print("Tienes dos caminos \n"
       "B: Explorar los alrededores en busca de suministros \n")
 
 opcion = input("¿Qué escoges? [A/B] \n").upper()
+
+#Se desprenden las condiciones de acuerdo al camino que haya escogido el jugador.
+if opcion == "A":
+      print("Te adrentas en el bosque, en donde observas una edificación antigua, a la cual ingresas. \n" 
+            "Al interior encuentras una especie de dispositivo de comunicaciones \n" 
+            "Tienes dos opciones: \n" 
+            "A: Activas el dispositivo \n" 
+            "B: No activas el dispositivo \n")
+      opcion = input("¿Qué escoges? [A/B]")
+      if opcion == "A":
+            print("Al activar el dispositivo, este comienza a emitir una luz brillante. \n"
+                  "Está luz se intensifica de tal forma que emite un detello... \n"
+                  "¡Estás muerto! \n")
+      elif opcion == "B":
+            print("Al no activar el dispositivo no logras tomar contacto ")
