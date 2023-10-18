@@ -23,10 +23,24 @@ if opcion == "A":
             "Tienes dos opciones: \n" 
             "A: Activas el dispositivo \n" 
             "B: No activas el dispositivo \n")
-      opcion = input("¿Qué escoges? [A/B]")
-      if opcion == "A":
+      opcion_caminob = input("¿Qué escoges? [A/B]").upper()
+      if opcion_caminob == "A":
             print("Al activar el dispositivo, este comienza a emitir una luz brillante. \n"
                   "Está luz se intensifica de tal forma que emite un detello... \n"
                   "¡Estás muerto! \n")
-      elif opcion == "B":
-            print("Al no activar el dispositivo no logras tomar contacto ")
+      elif opcion_caminob == "B":
+            print("Al no activar el dispositivo de comunicaciones, no logras tomar contacto \n"
+                  "Te quedas en planeta, al no tener suminsitros finalmente al paso del tiempo mueres de hambre \n")
+
+#Se desprenden las condiciones para el segundo camino posible.
+elif opcion == "B":
+      print("Al exporar los alrededores de la nave, encuentra un artefacto, el cual tiene el aspecto de un \n"
+            "Traductor universal, pero al no conocer su origen dudas si tomarlo o no: \n"
+            "A: Tomas el artefacto \n"
+            "B: No tomas el artefacto \n")
+      opcion_inventario = input("¿Lo tomas? [A/B]").upper()
+
+      artefacto_inventario = False
+
+      if opcion_inventario == "A":
+            print("")
