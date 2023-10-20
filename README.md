@@ -73,4 +73,3 @@ elif x == 3:
 else:
     print("x es menor que 5 y diferente de 3")
 ```
-```
