@@ -74,5 +74,3 @@ else:
     print("x es menor que 5 y diferente de 3")
 ```
 ```
-
-Espero que te sea útil. 😊 ¿Hay algo más en lo que pueda ayudarte?
