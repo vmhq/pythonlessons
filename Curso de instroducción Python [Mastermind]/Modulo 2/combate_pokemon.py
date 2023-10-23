@@ -1,7 +1,7 @@
 from random import randint
 import os
 
-#Configuración de vida y de barra de vida
+#Configuración de la vida y de barra de vida
 VIDA_INICIAL_PIKACHU = 80
 VIDA_INICIAL_SQUIRTLE = 90
 TAMANIO_BARA_VIDA = 20
