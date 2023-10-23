@@ -18,7 +18,7 @@ while vida_pikachu > 0 and vida_squirtle > 0:
         print("Pikachu ataca con Onda Trueno. \n" )
         vida_squirtle -= 11
 
-    print("La vida de Pikachu es {} y la vida de Squirtle es {}" .format(vida_pikachu, vida_squirtle))
+    print("La vida de Pikachu es {} y la vida de Squirtle es {} \n" .format(vida_pikachu, vida_squirtle))
     input("presiona enter para continuar... \n\n")
 
     #Turno Squirtle
@@ -28,15 +28,15 @@ while vida_pikachu > 0 and vida_squirtle > 0:
     while ataque_squirtle != "P" and ataque_squirtle != "A" and ataque_squirtle != "B":
         ataque_squirtle = input("¿Qué ataque deseas realizar? \n"
                             "[P]lacaje \n"
-                            "Pistolo de [A]gua \n"
+                            "Pistola de [A]gua \n"
                             "[B]urbuja \n").upper()
     if ataque_squirtle == "P":
         print("Squirtle utiliza placaje \n")
         vida_pikachu -= 10
     elif ataque_squirtle == "A":
-        print("Squirtle utiliza pistilo de agua \n")
+        print("Squirtle utiliza pistola de agua \n")
         vida_pikachu -= 12
-    elif ataque_pikachu == "B":
+    elif ataque_squirtle == "B":
         print("Squirtle utiliza Burbuja \n")
         vida_pikachu -= 9
     
