@@ -1,68 +1,82 @@
-# Python
+# Python 🐍
 
-Repositorio con todos los códigos escritos en Python durante el proceso de aprendizaje de este lenguaje de programación.
+Este repositorio contiene todos los códigos escritos en Python durante mi proceso de aprendizaje de este lenguaje de programación.
 
-# Guía de Python: Funciones y Estructuras de Control
+## Tabla de contenidos
+- [Funciones en Python](#funciones-en-python)
+  - [Numéricas](#funciones-numéricas)
+  - [Cadenas](#funciones-de-cadena)
+  - [Listas](#funciones-de-lista)
+  - [Tipo](#funciones-de-tipo)
+  - [Input/Output](#inputoutput)
+  - [Importación y Sistema](#importación-de-módulos-y-comandos-del-sistema)
+  - [Conversión de Tipo](#conversión-de-tipo)
+  - [Otros](#otros)
+- [Listas](#listas-en-python)
+- [Operaciones Booleanas](#operaciones-booleanas-en-python)
+- [Estructuras de Control](#estructuras-de-control-en-python)
 
-## Funciones de Python
+## Funciones en Python
+Resumen y ejemplos de funciones comunes en Python.
 
 ### Funciones Numéricas
-- `abs(x)`: Devuelve el valor absoluto de `x`.
-- `round(x)`: Redondea `x` al número entero más cercano.
-- `max(x, y, ...)`: Devuelve el valor máximo entre `x`, `y`, etc.
-- `min(x, y, ...)`: Devuelve el valor mínimo entre `x`, `y`, etc.
+- `abs(x)`: Valor absoluto de `x`.
+- `round(x)`: Redondeo de `x`.
+- `max(x, y, ...)`: Valor máximo.
+- `min(x, y, ...)`: Valor mínimo.
 
 ### Funciones de Cadena
-- `len(s)`: Longitud de la cadena `s`.
-- `str(x)`: Convierte `x` a una cadena.
+- `len(s)`: Longitud de `s`.
+- `str(x)`: Convierte a cadena.
 
 ### Funciones de Lista
-- `len(l)`: Longitud de la lista `l`.
-- `sorted(l)`: Devuelve una lista ordenada de `l`.
+- `len(l)`: Longitud de `l`.
+- `sorted(l)`: Lista ordenada.
 
 ### Funciones de Tipo
-- `type(x)`: Devuelve el tipo de `x`.
+- `type(x)`: Tipo de `x`.
 
 ### Input/Output
-- `input(s)`: Muestra una cadena `s` y espera una entrada del usuario.
-- `print(x)`: Imprime `x`.
+- `input(s)`: Entrada del usuario.
+- `print(x)`: Imprimir `x`.
 
 ### Importación de Módulos y Comandos del Sistema
-- `import [module_name]`: Importa un módulo llamado `module_name`.
-- `os.system(command)`: Ejecuta un comando del sistema operativo.
+- `import [module_name]`: Importar módulo.
+- `os.system(command)`: Comando del SO.
 
 ### Conversión de Tipo
-- `int(x)`: Convierte `x` a un entero.
-- `float(x)`: Convierte `x` a un número de coma flotante.
+- `int(x)`: A entero.
+- `float(x)`: A número flotante.
 
 ### Otros
-- `range(x, y, z)`: Genera una secuencia de números desde `x` hasta `y-1`, incrementando en `z`.
-- `help()`: Invoca el sistema de ayuda integrado.
+- `range(x, y, z)`: Secuencia de números.
+- `help()`: Ayuda integrada.
 
-Por supuesto, aquí tienes la explicación lista para añadir a tu README:
+---
 
 ## Listas en Python
-
-En Python, una "list" (lista en inglés) es una estructura de datos que puede contener múltiples elementos de diferentes tipos, como números, cadenas de texto, o incluso otras listas. Las listas son mutables, lo que significa que puedes cambiar su contenido después de haberlas creado.
-
-### Definición
-
-Las listas se definen colocando los elementos entre corchetes `[ ]` y separándolos con comas. Por ejemplo:
+Definición, ejemplos y operaciones básicas con listas.
 
 ```python
 mi_lista = [1, 2, 3, "hola"]
 ```
 
-En este caso, `mi_lista` contiene cuatro elementos: los números 1, 2, 3 y el string "hola".
+---
 
 ## Operaciones Booleanas en Python
+Ejemplos y explicaciones de operaciones booleanas.
 
-Las operaciones booleanas en Python se realizan con operadores como `and`, `or`, y `not`. Estos toman valores booleanos (`True` o `False`) y devuelven un resultado booleano. Por ejemplo, `True and False` devuelve `False` porque el operador `and` requiere que ambos operandos sean `True` para que el resultado final sea `True`.
+```python
+True and False # Devuelve False
+```
+
+---
 
 ## Estructuras de Control en Python
+Explicación y ejemplos de estructuras de control comunes.
 
 ### While
-Loop que se ejecuta mientras una condición sea verdadera.
+Loop que continúa mientras se cumple una condición.
 
 ```python
 contador = 0
@@ -71,31 +85,8 @@ while contador < 5:
     contador += 1
 ```
 
-### If
-
-Evalúa una condición y ejecuta un bloque de código si es verdadera.
-
-```python
-x = 10
-if x > 5:
-    print("x es mayor que 5")
-```
-
-### Elif
-
-Se utiliza después de un `if` para evaluar otra condición si la primera es falsa.
-
-```python
-x = 3
-if x > 5:
-    print("x es mayor que 5")
-elif x == 3:
-    print("x es igual a 3")
-```
-
-### Else
-
-Se ejecuta si todas las condiciones anteriores son falsas.
+### If, Elif, Else
+Condiciones y bloques de código condicional.
 
 ```python
 x = 1
@@ -105,4 +96,29 @@ elif x == 3:
     print("x es igual a 3")
 else:
     print("x es menor que 5 y diferente de 3")
+```
+
+### Continue
+Salta a la siguiente iteración del bucle.
+
+```python
+contador = 0
+while contador < 5:
+    if contador == 2:
+        contador += 1
+        continue
+    print(contador)
+    contador += 1
+```
+
+### Break
+Sale del bucle actual.
+
+```python
+contador = 0
+while contador < 5:
+    if contador == 3:
+        break
+    print(contador)
+    contador += 1
 ```
