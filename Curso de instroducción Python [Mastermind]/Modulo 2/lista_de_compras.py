@@ -1,11 +1,11 @@
-# Este es un programa que permitirá crear una lista de compras con los elementos que el usuario ingrese. 
+# Este es un programa que permitirá crear una lista de compras con los productos que el usuario ingrese. 
 
 import os
 
 titulo = "✨ Bienvenido a List, tu programa organizador de compras ✨"
 print("\n" + titulo + "\n" + "-" * len(titulo) + "\n")
 
-# Se define la variable de la lista, se encuentra vacía para que el usuario ingrese sus elementos. 
+# Se define la variable de la lista, se encuentra vacía para que el usuario ingrese sus productos. 
 lista_compra = []
 
 while True:
@@ -39,7 +39,7 @@ while True:
         lista_compra.append(producto)
         print("{} añadido!" .format(producto))
     else:
-        print("{} no fue añadido  ❌" .format(producto))
+        print("{} no fue añadido ❌" .format(producto))
 
 print("\n La lista de la compra es: \n")
 print(lista_compra)
