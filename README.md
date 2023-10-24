@@ -39,10 +39,31 @@ Repositorio con todos los códigos escritos en Python durante el proceso de apre
 - `range(x, y, z)`: Genera una secuencia de números desde `x` hasta `y-1`, incrementando en `z`.
 - `help()`: Invoca el sistema de ayuda integrado.
 
+Por supuesto, aquí tienes la explicación lista para añadir a tu README:
+
+## Listas en Python
+
+En Python, una "list" (lista en inglés) es una estructura de datos que puede contener múltiples elementos de diferentes tipos, como números, cadenas de texto, o incluso otras listas. Las listas son mutables, lo que significa que puedes cambiar su contenido después de haberlas creado.
+
+### Definición
+
+Las listas se definen colocando los elementos entre corchetes `[ ]` y separándolos con comas. Por ejemplo:
+
+```python
+mi_lista = [1, 2, 3, "hola"]
+```
+
+En este caso, `mi_lista` contiene cuatro elementos: los números 1, 2, 3 y el string "hola".
+
+## Operaciones Booleanas en Python
+
+Las operaciones booleanas en Python se realizan con operadores como `and`, `or`, y `not`. Estos toman valores booleanos (`True` o `False`) y devuelven un resultado booleano. Por ejemplo, `True and False` devuelve `False` porque el operador `and` requiere que ambos operandos sean `True` para que el resultado final sea `True`.
+
 ## Estructuras de Control en Python
 
 ### While
 Loop que se ejecuta mientras una condición sea verdadera.
+
 ```python
 contador = 0
 while contador < 5:
@@ -51,7 +72,9 @@ while contador < 5:
 ```
 
 ### If
+
 Evalúa una condición y ejecuta un bloque de código si es verdadera.
+
 ```python
 x = 10
 if x > 5:
@@ -59,7 +82,9 @@ if x > 5:
 ```
 
 ### Elif
+
 Se utiliza después de un `if` para evaluar otra condición si la primera es falsa.
+
 ```python
 x = 3
 if x > 5:
@@ -69,7 +94,9 @@ elif x == 3:
 ```
 
 ### Else
+
 Se ejecuta si todas las condiciones anteriores son falsas.
+
 ```python
 x = 1
 if x > 5:
