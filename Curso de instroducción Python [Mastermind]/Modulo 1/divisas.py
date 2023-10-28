@@ -1,3 +1,11 @@
+'''
+Este es un programa de conversión de divisas. El usuario puede elegir entre varias opciones para convertir 
+entre diferentes divisas. Las tasas de cambio se definen al principio del código. 
+El programa solicita al usuario que elija una opción de conversión y luego solicita la cantidad de dinero 
+que desea convertir. Finalmente, realiza la conversión y muestra el resultado al usuario.
+'''
+
+
 dolar_euro = 0.85
 libra_euro = 1.15
 dolar_clp = 925
