@@ -5,7 +5,6 @@ El programa solicita al usuario que elija una opción de conversión y luego sol
 que desea convertir. Finalmente, realiza la conversión y muestra el resultado al usuario.
 '''
 
-
 dolar_euro = 0.85
 libra_euro = 1.15
 dolar_clp = 925
