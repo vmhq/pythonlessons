@@ -1,8 +1,10 @@
 # Python 🐍
 
-Este repositorio contiene todos los códigos escritos en Python durante mi proceso de aprendizaje de este lenguaje de programación.
+Python es uno de los lenguajes de programación más populares y versátiles en la actualidad. Su simplicidad y legibilidad hacen que sea un lenguaje ideal para principiantes, pero también es poderoso y ampliamente utilizado en la industria para desarrollar aplicaciones web, análisis de datos, inteligencia artificial y muchas otras áreas. Aprender Python es una inversión valiosa, ya que abre puertas a una variedad de oportunidades en el mundo de la tecnología y más allá.
+
 
 ## Tabla de contenidos
+- [Acerca de este repositorio](#acerca-de-este-repositorio)
 - [Funciones en Python](#funciones-en-python)
   - [Numéricas](#funciones-numéricas)
   - [Cadenas](#funciones-de-cadena)
@@ -15,6 +17,9 @@ Este repositorio contiene todos los códigos escritos en Python durante mi proce
 - [Listas](#listas-en-python)
 - [Operaciones Booleanas](#operaciones-booleanas-en-python)
 - [Estructuras de Control](#estructuras-de-control-en-python)
+
+## Acerca de este repositorio
+Este repositorio contiene todos los códigos escritos en Python durante el proceso de aprendizaje de este lenguaje de programación.
 
 ## Funciones en Python
 Resumen y ejemplos de funciones comunes en Python.
