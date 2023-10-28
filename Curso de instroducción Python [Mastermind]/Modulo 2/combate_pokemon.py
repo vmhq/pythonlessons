@@ -1,3 +1,41 @@
+'''
+El código es un juego simple de combate entre dos Pokémon: Pikachu y Squirtle.
+
+Importación de módulos:
+
+Se importa la función randint del módulo random para generar números aleatorios.
+Se importa el módulo os para interactuar con el sistema operativo.
+Configuración inicial:
+
+Se establecen las vidas iniciales de Pikachu y Squirtle.
+Se define el tamaño de la barra de vida.
+Se definen los daños de los ataques de ambos Pokémon.
+Inicio del combate:
+
+Mientras ambos Pokémon tengan vida, el combate continúa.
+Turno de Pikachu:
+
+Pikachu elige un ataque al azar entre "Bola Voltio" y "Onda Trueno".
+Se resta la vida de Squirtle según el ataque elegido.
+Se muestra la barra de vida de ambos Pokémon.
+Se espera a que el jugador presione Enter para continuar.
+Luego, se limpia la pantalla.
+Turno de Squirtle:
+
+El jugador elige el ataque que Squirtle usará.
+Se resta la vida de Pikachu según el ataque elegido.
+Se muestra nuevamente la barra de vida de ambos Pokémon.
+Se espera a que el jugador presione Enter para continuar.
+Se limpia la pantalla nuevamente.
+Fin del combate:
+
+Una vez que uno de los Pokémon se queda sin vida, se determina el ganador y se muestra un mensaje correspondiente.
+El código utiliza barras de vida (representadas con el símbolo #) para mostrar gráficamente la salud restante de cada Pokémon. 
+Además, se utiliza la función os.system para limpiar la pantalla después de cada turno, 
+lo que permite que la interfaz del juego sea más limpia y amigable.
+
+'''
+
 from random import randint
 import os
 
