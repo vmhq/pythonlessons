@@ -23,7 +23,6 @@ Movimiento: Dependiendo de la tecla presionada, se actualiza la posición del pe
 Se usa el operador % para que el mapa sea "cíclico", es decir, si sales por un lado, apareces en el opuesto.
 '''
 
-
 # Se importan las librerías necesarias
 import readchar # Importa la librería readchar.
 import os  # Importa la librería os
