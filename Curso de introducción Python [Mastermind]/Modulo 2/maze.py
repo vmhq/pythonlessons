@@ -24,29 +24,26 @@ Se usa el operador % para que el mapa sea "cíclico", es decir, si sales por un 
 '''
 
 # Se importan las librerías necesarias
-import readchar # Importa la librería readchar.
-import os  # Importa la librería os
+import readchar
+import os
 
 # Se definen las constantes
-POS_X = 0 
+POS_X = 0
 POS_Y = 1
 
 MAP_WIDTH = 20
 MAP_HEIGHT = 15
 
-# Posición inicial.
-my_position = [3,1]
+# Posición inicial
+my_position = [3, 1]
 
-# Se comienza a construir el mapa. 
+# Bucle principal del juego
 while True:
-    # Limpia la pantalla antes de imprimir el mapa
-    if os.name == 'posix':  # Para sistemas Unix (macOS, Linux)
-        os.system('clear')
-    else:  # Para Windows
-        os.system('cls')
+    # Limpia la pantalla
+    os.system('clear' if os.name == 'posix' else 'cls')
 
+    # Dibuja el mapa
     print("+" + "-" * MAP_WIDTH * 3 + "+")
-
     for cordinate_y in range(MAP_HEIGHT):
         print("|", end="")
         for cordinate_x in range(MAP_WIDTH):
@@ -55,12 +52,17 @@ while True:
             else:
                 print("   ", end="")
         print("|")
-
     print("+" + "-" * MAP_WIDTH * 3 + "+")
 
-    # Se le solicita al usuario que ingrese una dirección para mover al jugador
-    print("Señala en que dirección deseas moverte, utiliza [WASD] o [Q] para salir del juego. \n> ", end=(""))
-    direction = readchar.readchar().upper()
+    # Solicita una dirección al usuario
+    while True:
+        print("Señala en qué dirección deseas moverte, utiliza [WASD] o [Q] para salir del juego. \n> ", end="")
+        direction = readchar.readchar().upper()
+
+        if direction in ["W", "S", "A", "D", "Q"]:
+            break
+        else:
+            print("Dirección no válida. Por favor, intenta de nuevo.")
 
     if direction == "W":
         my_position[POS_Y] -= 1
