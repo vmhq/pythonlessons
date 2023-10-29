@@ -40,8 +40,11 @@ my_position = [3, 1]
 # Bucle principal del juego
 while True:
     # Limpia la pantalla
-    os.system('clear' if os.name == 'posix' else 'cls')
-
+    if os.name == 'posix':  # Para sistemas Unix (macOS, Linux)
+        os.system('clear')
+    else:  # Para Windows
+        os.system('cls')
+        
     # Dibuja el mapa
     print("+" + "-" * MAP_WIDTH * 3 + "+")
     for cordinate_y in range(MAP_HEIGHT):
