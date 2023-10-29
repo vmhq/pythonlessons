@@ -9,7 +9,7 @@ POS_Y = 1
 MAP_WIDTH = 20
 MAP_HEIGHT = 15
 
-my_position = [7,6]
+my_position = [3,1]
 
 # Se comienza a construir el mapa. 
 while True:
@@ -33,14 +33,20 @@ while True:
     print("+" + "-" * MAP_WIDTH * 3 + "+")
 
     # Se le solicita al usuario que ingrese una dirección para mover al jugador
-    print("señala en que dirección deseas moverte, utiliza [WASD] > ")
+    print("señala en que dirección deseas moverte, utiliza [WASD] \n > ")
     direction = readchar.readchar().upper()
 
     if direction == "W":
         my_position[POS_Y] -= 1
+        my_position[POS_Y] %= MAP_HEIGHT
     elif direction == "S":
         my_position[POS_Y] += 1
+        my_position[POS_Y] %= MAP_HEIGHT
     elif direction == "A":
         my_position[POS_X] -= 1
+        my_position[POS_X] %= MAP_WIDTH
     elif direction == "D":
         my_position[POS_X] += 1
+        my_position[POS_X] %= MAP_WIDTH
+    elif direction == "Q":
+        break
