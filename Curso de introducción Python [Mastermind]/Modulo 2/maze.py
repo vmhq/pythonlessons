@@ -1,31 +1,34 @@
 '''
-Este código es un pequeño juego de consola en Python que permite mover un personaje representado por 
-el símbolo "@" en un mapa. Aquí te explico sus partes principales:
+Importación de Librerías: Importa las librerías necesarias (readchar, os, random).
 
-Importación de librerías: Se importan readchar para leer un solo carácter del teclado 
-y os para limpiar la pantalla.
+Definición de Constantes y Variables Iniciales: Establece las dimensiones del mapa (MAP_WIDTH, MAP_HEIGHT), 
+la posición inicial (my_position), y la longitud de la cola (tail_leght).
 
-Constantes: Se definen algunas constantes como POS_X, POS_Y, MAP_WIDTH y MAP_HEIGHT para manejar las dimensiones del mapa 
-y la posición.
+Objetos en el Mapa: Inicializa una lista de objetos (map_objects) que se ubicarán de forma aleatoria en el mapa.
 
-Posición inicial: Se establece la posición inicial del personaje en [3,1].
+Bucle Principal: Un bucle while True que se encarga de las siguientes tareas:
 
-Bucle while True:: Este es el corazón del juego. Hace lo siguiente:
+a. Limpiar Pantalla: Limpia la consola antes de dibujar un nuevo cuadro del juego.
 
-Limpia la pantalla.
+b. Dibujar el Mapa: Dibuja el mapa, el personaje y los objetos. Si el personaje se cruza con un objeto, 
+éste desaparece y la longitud de la cola aumenta (tail_leght += 1).
 
-Dibuja el mapa y coloca el personaje en su posición actual.
+c. Recoger Entrada del Usuario: Solicita que el usuario introduzca una dirección (W, A, S, D) para mover el personaje o Q 
+para salir del juego.
 
-Pide al usuario una dirección para mover el personaje usando las teclas WASD o salir con Q.
+d. Mover el Personaje: Según la tecla presionada, se actualiza la posición del personaje y su cola. Si eliges "W", 
+por ejemplo, la posición en Y disminuirá en 1, y la cabeza de la cola se actualizará para que coincida con la posición anterior del personaje.
 
-Movimiento: Dependiendo de la tecla presionada, se actualiza la posición del personaje. 
+e. Verificar Colisión con la Cola: Después de mover al personaje, el código verifica si la nueva posición de 
+la cabeza choca con algún segmento de la cola (tail[1:]). Si es así, el juego termina y se muestra un mensaje de "¡Has chocado con tu propia cola! 😢 Fin del juego".
 
-Se usa el operador % para que el mapa sea "cíclico", es decir, si sales por un lado, apareces en el opuesto.
+f. Salir del Juego: Si se presiona "Q", se rompe el bucle y el juego termina.
 '''
 
 # Se importan las librerías necesarias
 import readchar
 import os
+import random
 
 # Se definen las constantes
 POS_X = 0
@@ -34,8 +37,19 @@ POS_Y = 1
 MAP_WIDTH = 20
 MAP_HEIGHT = 15
 
-# Posición inicial
+NUM_OBJECTS = 15
+
+# Posición inicial y tamaño de la cola.
 my_position = [3, 1]
+tail_leght = 0 
+tail = []
+
+# Se definen los objetos en el mapa de forma aleatoria.
+map_objects = []
+while len(map_objects) < NUM_OBJECTS:
+    new_object = [random.randint(0, MAP_WIDTH - 1), random.randint(0, MAP_HEIGHT - 1)]
+    if new_object not in map_objects and new_object != my_position:
+        map_objects.append(new_object)
 
 # Bucle principal del juego
 while True:
@@ -50,10 +64,21 @@ while True:
     for cordinate_y in range(MAP_HEIGHT):
         print("|", end="")
         for cordinate_x in range(MAP_WIDTH):
+            char_to_draw = " "
+            object_in_cell = None
+            for map_object in map_objects:
+                if map_object[POS_X] == cordinate_x and map_object[POS_Y] == cordinate_y:
+                    char_to_draw = "*"
+                    object_in_cell = map_object
+            for tail_piece in tail:
+                if tail_piece[POS_X] == cordinate_x and tail_piece[POS_Y] == cordinate_y:
+                    char_to_draw = "@"
             if my_position[POS_X] == cordinate_x and my_position[POS_Y] == cordinate_y:
-                print(" @ ", end="")
-            else:
-                print("   ", end="")
+                char_to_draw = "@"
+                if object_in_cell:
+                    map_objects.remove(object_in_cell)
+                    tail_leght += 1
+            print(" {} " .format(char_to_draw), end="")
         print("|")
     print("+" + "-" * MAP_WIDTH * 3 + "+")
 
@@ -65,19 +90,32 @@ while True:
         if direction in ["W", "S", "A", "D", "Q"]:
             break
         else:
-            print("Dirección no válida. Por favor, intenta de nuevo.")
+            print("Dirección no válida ❌. Por favor, intenta de nuevo.")
 
     if direction == "W":
+        tail.insert(0, my_position.copy())
+        tail = tail[:tail_leght]
         my_position[POS_Y] -= 1
         my_position[POS_Y] %= MAP_HEIGHT
     elif direction == "S":
+        tail.insert(0, my_position.copy())
+        tail = tail[:tail_leght]
         my_position[POS_Y] += 1
         my_position[POS_Y] %= MAP_HEIGHT
     elif direction == "A":
+        tail.insert(0, my_position.copy())
+        tail = tail[:tail_leght]
         my_position[POS_X] -= 1
         my_position[POS_X] %= MAP_WIDTH
     elif direction == "D":
+        tail.insert(0, my_position.copy())
+        tail = tail[:tail_leght]
         my_position[POS_X] += 1
         my_position[POS_X] %= MAP_WIDTH
     elif direction == "Q":
+        break
+
+    # Verificar si choca con su cola
+    if my_position in tail[1:]: 
+        print("¡Has chocado con tu propia cola! 😢 Fin del juego.")
         break
