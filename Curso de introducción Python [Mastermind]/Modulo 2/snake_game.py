@@ -1,4 +1,7 @@
 '''
+
+Juego del Snake
+
 Importación de Librerías: Importa las librerías necesarias (readchar, os, random).
 
 Definición de Constantes y Variables Iniciales: Establece las dimensiones del mapa (MAP_WIDTH, MAP_HEIGHT), 
