@@ -37,7 +37,7 @@ POS_Y = 1
 MAP_WIDTH = 20
 MAP_HEIGHT = 15
 
-NUM_OBJECTS = 15
+NUM_OBJECTS = 11
 
 # Posición inicial y tamaño de la cola.
 my_position = [3, 1]
@@ -78,6 +78,12 @@ while True:
                 if object_in_cell:
                     map_objects.remove(object_in_cell)
                     tail_leght += 1
+                    # Cuando se come un objeto se añade uno más de forma aleatoria. 
+                    while True:
+                        new_object = [random.randint(0, MAP_WIDTH - 1), random.randint(0, MAP_HEIGHT - 1)]
+                        if new_object not in map_objects and new_object != my_position:
+                            map_objects.append(new_object)
+                            break
             print(" {} " .format(char_to_draw), end="")
         print("|")
     print("+" + "-" * MAP_WIDTH * 3 + "+")
