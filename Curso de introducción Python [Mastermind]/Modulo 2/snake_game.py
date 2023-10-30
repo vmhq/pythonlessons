@@ -126,5 +126,5 @@ while True:
 
     # Verificar si choca con su cola
     if my_position in tail[1:]: 
-        print("¡Has chocado con tu propia cola! 😢 Fin del juego.")
+        print("\n ¡Has chocado con tu propia cola! 😢 Fin del juego. \n")
         break
