@@ -66,7 +66,7 @@ while True:
         os.system('cls')
         
     # Dibuja el mapa
-    print("✨Tu puntaje actual es: {} puntos.✨ \n" .format(score))
+    print("✨Tu puntaje actual es: {} puntos✨ \n" .format(score))
     print("+" + "-" * MAP_WIDTH * 3 + "+")
     for cordinate_y in range(MAP_HEIGHT):
         print("|", end="")
