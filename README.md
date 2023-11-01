@@ -17,6 +17,7 @@ Python es uno de los lenguajes de programación más populares y versátiles en 
 - [Listas](#listas-en-python)
 - [Operaciones Booleanas](#operaciones-booleanas-en-python)
 - [Estructuras de Control](#estructuras-de-control-en-python)
+- [Definición de Funciones con `def` 🐍](#definición-de-funciones-con-def-🐍)
 
 ## Acerca de este repositorio
 Este repositorio contiene todos los códigos escritos en Python durante el proceso de aprendizaje de este lenguaje de programación.
@@ -75,8 +76,6 @@ Ejemplos y explicaciones de operaciones booleanas.
 True and False # Devuelve False
 ```
 
----
-
 ## Estructuras de Control en Python
 Explicación y ejemplos de estructuras de control comunes.
 
@@ -127,3 +126,31 @@ while contador < 5:
     print(contador)
     contador += 1
 ```
+
+## Definición de Funciones con `def` 🐍
+En Python, se pueden crear funciones personalizadas utilizando la palabra clave `def`. Una función es un bloque de código reutilizable que realiza una acción específica. Al definir una función, puedes optar por establecer parámetros que la función usará durante su ejecución.
+
+### Sintaxis básica
+
+```python
+def nombre_de_funcion(parametro1, parametro2, ...):
+    # Código de la función
+    return valor_de_retorno
+```
+
+### Ejemplo 🌈
+Aquí hay un ejemplo simple que muestra cómo definir una función para calcular el área de un rectángulo.
+
+```python
+def area_rectangulo(base, altura):
+    return base * altura
+
+# Usando la función
+base = 5
+altura = 10
+area = area_rectangulo(base, altura)
+print(f"El área del rectángulo con base {base} y altura {altura} es {area}.")
+```
+
+Este código define una función llamada `area_rectangulo` que toma dos parámetros: `base` y `altura`. La función calcula el área multiplicando estos dos valores y luego devuelve el resultado.
+
