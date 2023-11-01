@@ -1,7 +1,8 @@
-def largo_string (strig):
+def main (strig):
     largo = 0 
     for n in strig:
         largo += 1
     return largo
 
-print(len("Hola mundo"))
+if __name__ == "__main__":
+    main()
