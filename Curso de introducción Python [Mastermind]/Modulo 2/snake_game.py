@@ -47,6 +47,9 @@ my_position = [3, 1]
 tail_leght = 0 
 tail = []
 
+#Puntaje
+score = 0 
+
 # Se definen los objetos en el mapa de forma aleatoria.
 map_objects = []
 while len(map_objects) < NUM_OBJECTS:
@@ -63,6 +66,7 @@ while True:
         os.system('cls')
         
     # Dibuja el mapa
+    print("✨Tu puntaje actual es: {} puntos.✨ \n" .format(score))
     print("+" + "-" * MAP_WIDTH * 3 + "+")
     for cordinate_y in range(MAP_HEIGHT):
         print("|", end="")
@@ -86,6 +90,7 @@ while True:
                         new_object = [random.randint(0, MAP_WIDTH - 1), random.randint(0, MAP_HEIGHT - 1)]
                         if new_object not in map_objects and new_object != my_position:
                             map_objects.append(new_object)
+                            score += 1
                             break
             print(" {} " .format(char_to_draw), end="")
         print("|")
@@ -124,8 +129,9 @@ while True:
     elif direction == "Q":
         break
 
-    # Verificar si choca con su cola
+    # Fin del juego y puntuaje. 
     if my_position in tail[1:]:
         os.system('clear') if os.name == 'posix' else os.system('cls') #Limpia la pantalla 
-        print("¡Has chocado con tu propia cola! 😢 Fin del juego.")
+        print("❌ ¡Has chocado con tu propia cola! ❌\n")
+        print("✨Tu puntaje fue de {} puntos✨\n" .format(score))
         break
