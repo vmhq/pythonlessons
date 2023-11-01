@@ -17,7 +17,7 @@ Python es uno de los lenguajes de programación más populares y versátiles en 
 - [Listas](#listas-en-python)
 - [Operaciones Booleanas](#operaciones-booleanas-en-python)
 - [Estructuras de Control](#estructuras-de-control-en-python)
-- [Definición de Funciones con `def` 🐍](#definición-de-funciones-con-def-🐍)
+- [Definición de Funciones con `def`](#definición-de-funciones-con-def)
 
 ## Acerca de este repositorio
 Este repositorio contiene todos los códigos escritos en Python durante el proceso de aprendizaje de este lenguaje de programación.
@@ -127,7 +127,7 @@ while contador < 5:
     contador += 1
 ```
 
-## Definición de Funciones con `def` 🐍
+## Definición de Funciones con `def`
 En Python, se pueden crear funciones personalizadas utilizando la palabra clave `def`. Una función es un bloque de código reutilizable que realiza una acción específica. Al definir una función, puedes optar por establecer parámetros que la función usará durante su ejecución.
 
 ### Sintaxis básica
