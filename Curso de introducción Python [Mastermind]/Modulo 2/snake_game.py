@@ -127,6 +127,7 @@ while True:
         my_position[POS_X] += 1
         my_position[POS_X] %= MAP_WIDTH
     elif direction == "Q":
+        print("✨Tu puntaje fue de {} puntos✨\n" .format(score))
         break
 
     # Fin del juego y puntuaje. 
