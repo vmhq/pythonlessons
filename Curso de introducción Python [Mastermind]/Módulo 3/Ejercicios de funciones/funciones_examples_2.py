@@ -1,4 +1,4 @@
-def main (strig):
+def main(strig):
     largo = 0 
     for n in strig:
         largo += 1
