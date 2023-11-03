@@ -8,12 +8,12 @@ HACKER_FILE_NAME = "leeme.txt"
 
 
 def get_user_path():
-    return f"{Path.home()}/"
+     return "{}/".format(Path.home())
 
 
 def delay_action():
     number_of_hours = randrange(1, 4)
-    print(f"Dormiré {number_of_hours} horas.")
+    print("Dormire {} horas.".format(number_of_hours))
     sleep(number_of_hours * 60 * 60)
 
 
