@@ -18,6 +18,7 @@ Python es uno de los lenguajes de programación más populares y versátiles en 
 - [Operaciones Booleanas](#operaciones-booleanas-en-python)
 - [Estructuras de Control](#estructuras-de-control-en-python)
 - [Definición de Funciones con `def`](#definición-de-funciones-con-def)
+- [Extracción de Datos con `requests-html`](#extracción-de-datos-con-requests-html)
 
 ## Acerca de este repositorio
 Este repositorio contiene todos los códigos escritos en Python durante el proceso de aprendizaje de este lenguaje de programación.
@@ -154,3 +155,72 @@ print(f"El área del rectángulo con base {base} y altura {altura} es {area}.")
 
 Este código define una función llamada `area_rectangulo` que toma dos parámetros: `base` y `altura`. La función calcula el área multiplicando estos dos valores y luego devuelve el resultado.
 
+Por supuesto, aquí tienes la sección añadida sobre cómo usar `requests-html` en Python, para incluirla en tu archivo README:
+
+## Extracción de Datos con `requests-html`
+
+La biblioteca `requests-html` es una poderosa herramienta en Python para realizar solicitudes web y manipular datos de HTML/XML. Es especialmente útil para web scraping, es decir, extraer datos de sitios web de forma programática.
+
+### Instalación
+Primero, necesitas instalar el paquete usando `pip`:
+```bash
+pip install requests-html
+```
+
+### Uso Básico
+Para comenzar a usar `requests-html`, primero debes importar la clase `HTMLSession` del módulo:
+
+```python
+from requests_html import HTMLSession
+```
+
+Luego, crea una sesión y realiza una solicitud a la URL deseada:
+
+```python
+session = HTMLSession()
+respuesta = session.get('https://ejemplo.com')
+```
+
+Puedes acceder al contenido de la respuesta y realizar búsquedas de elementos HTML utilizando selectores CSS:
+
+```python
+# Acceder al texto completo de la página
+texto_de_la_pagina = respuesta.text
+
+# Encontrar un elemento con su ID
+elemento_con_id = respuesta.html.find('#id_del_elemento', first=True)
+
+# Buscar todos los elementos de una clase específica
+elementos_con_clase = respuesta.html.find('.clase_del_elemento')
+```
+
+Para interactuar con JavaScript en sitios web dinámicos, puedes utilizar el método `.render()` que ejecuta JavaScript en la página:
+
+```python
+respuesta.html.render()
+```
+
+Ten en cuenta que `render()` requiere instalaciones adicionales como Chromium, que `requests-html` intentará descargar la primera vez que se ejecute.
+
+### Ejemplo Práctico
+Aquí hay un ejemplo simple de cómo extraer títulos de un blog:
+
+```python
+# Crea una sesión
+session = HTMLSession()
+
+# Realiza una solicitud GET a la página del blog
+respuesta = session.get('https://blog.ejemplo.com')
+
+# Renderiza la página para ejecutar JavaScript
+respuesta.html.render()
+
+# Busca todos los elementos que contienen los títulos de las publicaciones
+titulos = respuesta.html.find('h1.titulo_del_post')
+
+# Imprime los títulos encontrados
+for titulo in titulos:
+    print(titulo.text)
+```
+
+Este script imprime los títulos de las publicaciones de un blog ficticio, buscando en la página los `h1` con la clase `titulo_del_post`.
