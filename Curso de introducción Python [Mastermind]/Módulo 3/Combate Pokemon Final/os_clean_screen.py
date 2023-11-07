@@ -6,5 +6,5 @@ def clean_screen():
 
 
 if __name__ == "__main__":
-    def clean_screen()
+    clean_screen()
     
