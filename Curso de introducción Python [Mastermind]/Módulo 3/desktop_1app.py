@@ -1,3 +1,3 @@
 import PySimpleGUI as sg
 
-window = sg.Window("Demo", )
+window = sg.Window("Demo", [[]]).red()
