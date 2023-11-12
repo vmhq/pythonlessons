@@ -5,6 +5,7 @@ Python es uno de los lenguajes de programación más populares y versátiles en 
 
 ## Tabla de contenidos
 - [Acerca de este repositorio](#acerca-de-este-repositorio)
+- [PEP8: Guía de Estilo para el Código Python](#pep8-guía-de-estilo-para-el-código-python)
 - [Funciones en Python](#funciones-en-python)
   - [Numéricas](#funciones-numéricas)
   - [Cadenas](#funciones-de-cadena)
@@ -25,6 +26,40 @@ Python es uno de los lenguajes de programación más populares y versátiles en 
 
 ## Acerca de este repositorio
 Este repositorio contiene todos los códigos escritos en Python durante el proceso de aprendizaje de este lenguaje de programación.
+
+## PEP8: Guía de Estilo para el Código Python
+
+### ¿Qué es PEP8?
+
+PEP8 es el acrónimo de Python Enhancement Proposal 8. Es una guía de estilo que describe las convenciones para escribir código legible en Python. Esta guía es una parte fundamental para mantener un código coherente y fácil de leer en la comunidad de Python.
+
+### Objetivo de PEP8
+
+El principal objetivo de PEP8 es mejorar la legibilidad y coherencia del código Python. La consistencia en el estilo de codificación facilita que otros desarrolladores puedan leer y entender el código, independientemente de quién lo haya escrito.
+
+### Principales Aspectos de PEP8
+
+### Formato del Código
+- **Indentación**: Se utilizan 4 espacios por nivel de indentación.
+- **Líneas**: No más de 79 caracteres en cada línea de código y 72 para comentarios.
+- **Espacios en blanco**: Uso de espacios en blanco en ciertas situaciones para mejorar la legibilidad.
+
+### Nombres de Variables y Funciones
+- **Variables**: Nombres en minúsculas con palabras separadas por guiones bajos.
+- **Funciones**: Similar a las variables, en minúsculas y separadas por guiones bajos.
+- **Constantes**: En mayúsculas con palabras separadas por guiones bajos.
+
+### Importaciones
+- **Orden**: Las importaciones deben estar en bloques separados en el siguiente orden: bibliotecas estándar, bibliotecas de terceros y finalmente importaciones locales.
+- **Evitar**: Importaciones con '*'.
+
+### Importancia de PEP8
+
+Seguir PEP8 es crucial para mantener el código Python limpio, legible y coherente. Facilita la colaboración y el mantenimiento del código, especialmente en proyectos grandes o cuando se trabaja en equipo.
+
+### Conclusión
+
+PEP8 no es obligatorio, pero es altamente recomendado en la comunidad Python. Seguir estas directrices ayuda a mantener un alto estándar de calidad en el código y facilita la colaboración entre desarrolladores.
 
 ## Funciones en Python
 Resumen y ejemplos de funciones comunes en Python.
