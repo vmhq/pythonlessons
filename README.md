@@ -19,6 +19,7 @@ Python es uno de los lenguajes de programación más populares y versátiles en 
 - [Estructuras de Control](#estructuras-de-control-en-python)
 - [Definición de Funciones con `def`](#definición-de-funciones-con-def)
 - [Extracción de Datos con `requests-html`](#extracción-de-datos-con-requests-html)
+- [Machine Learning y Tipos de Modelos](#machine-learning-y-tipos-de-modelos)
 
 ## Acerca de este repositorio
 Este repositorio contiene todos los códigos escritos en Python durante el proceso de aprendizaje de este lenguaje de programación.
@@ -224,3 +225,16 @@ for titulo in titulos:
 ```
 
 Este script imprime los títulos de las publicaciones de un blog ficticio, buscando en la página los `h1` con la clase `titulo_del_post`.
+
+## Machine Learning y Tipos de Modelos
+Al trabajar con Machine Learning (ML) y Python, elegimos diferentes tipos de modelos basándonos en la naturaleza de nuestro problema. Para predecir si un dispositivo es reparable, aplicaríamos modelos de clasificación ya que buscamos una respuesta binaria: reparable o no reparable. Aquí hay una breve descripción de tres tipos comunes de modelos:
+
+- **Regresión Lineal**: A pesar de que no se aplica directamente a problemas de clasificación, es importante mencionarla. Se utiliza para predecir valores continuos, pero no categorías. Aun así, es la base sobre la que se construyen otros modelos como la regresión logística.
+
+- **Regresión Logística**: Es un modelo de clasificación que estima la probabilidad de que una instancia pertenezca a una clase. Aunque su nombre sugiere una relación con la regresión lineal, se utiliza para clasificación binaria y es efectiva cuando la relación entre la variable dependiente y las independientes es logística o sigmoidea.
+
+- **Árboles de Decisión**: Son modelos versátiles que se pueden utilizar tanto para clasificación como para regresión. Son particularmente útiles cuando las relaciones entre los predictores no son lineales y hay interacciones complejas. Los árboles de decisión dividen el conjunto de datos en subconjuntos basados en el valor de las características, lo que hace que el modelo sea fácil de interpretar.
+
+La elección entre estos modelos depende de varios factores como la linealidad de los datos, la necesidad de interpretabilidad y la complejidad del problema. La regresión logística es a menudo una primera línea de ataque para problemas de clasificación debido a su simplicidad y eficiencia. Por otro lado, los árboles de decisión son más flexibles y fáciles de interpretar, lo que puede ser invaluable en ciertas aplicaciones empresariales.
+
+La programación en ML es intrínsecamente diferente de la programación convencional. En lugar de codificar reglas específicas y lógica de programación, entrenamos a los modelos con datos para que aprendan patrones. Este enfoque requiere una comprensión profunda de los datos y estadísticas, ya que la calidad de los datos y la selección del modelo afectan directamente el rendimiento y la precisión. Además, los modelos de ML raramente alcanzan una precisión del 100% debido a la presencia de ruido en los datos, la posibilidad de sobreajuste y la naturaleza a menudo probabilística de las predicciones.
