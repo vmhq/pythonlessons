@@ -98,15 +98,12 @@ Resumen y ejemplos de funciones comunes en Python.
 - `range(x, y, z)`: Secuencia de números.
 - `help()`: Ayuda integrada.
 
----
-
 ## Listas en Python
 Definición, ejemplos y operaciones básicas con listas.
 
 ```python
 mi_lista = [1, 2, 3, "hola"]
 ```
----
 
 ## Slicing en Python
 
@@ -158,8 +155,6 @@ El slicing es extremadamente útil para tareas como:
 - Trabajar con matrices o filas y columnas en librerías como NumPy o Pandas.
 
 Incorporar el slicing en tus proyectos de Python puede hacer tu código más eficiente y legible.
-
----
 
 ## Operaciones Booleanas en Python
 Ejemplos y explicaciones de operaciones booleanas.
@@ -369,3 +364,5 @@ El **perceptrón** es un tipo de neurona artificial y es el bloque constructivo 
 
 El perceptrón es un modelo lineal, lo que significa que toma una decisión de clasificación basada en una combinación lineal de los pesos y entradas. Los perceptrones pueden manejar problemas de clasificación binaria y son la base sobre la cual se construyen redes neuronales más complejas.
 
+---
+Python ❤️
