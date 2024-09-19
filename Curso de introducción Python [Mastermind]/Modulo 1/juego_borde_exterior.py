@@ -1,6 +1,6 @@
 import random
 
-titulo = "Escape del borde exterior galáctico"
+titulo = "Escape del borde exterior Galáctico"
 print("\n" + titulo + "\n" + "-" * len(titulo) + "\n")
 
 #Se presenta al jugador la introducción a la historia.
