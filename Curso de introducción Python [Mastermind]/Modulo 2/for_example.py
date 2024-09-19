@@ -1,5 +1,5 @@
 vocales = ["a", "e", "i", "o", "u"]
-frase = "hola, hoy estoy aprendiendo Python"
+frase = "hola, hoy estoy aprendiendo Python en Linux"
 vocales_encontradas = 0
 
 for letra in frase:
