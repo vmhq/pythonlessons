@@ -1,4 +1,4 @@
-# Se importan las librerías necesarias
+# Se importan las librerías requeridas
 import os
 import random
 import readchar
